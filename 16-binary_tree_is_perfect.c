@@ -40,7 +40,7 @@ int bin_tree_height(const binary_tree_t *tree)
 	left_knot = bin_tree_height(tree->left);
 	right_knot = bin_tree_height(tree->right);
 
-	if (right_knot > left_knot)
+	if (right_knot >= left_knot)
 		return (right_knot + 1);
 	else
 		return (left_knot + 1);
