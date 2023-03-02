@@ -5,7 +5,7 @@
  * @tree: a pointer to the root node of the tree to measure the size
  *
  * Return: 0 If tree is NULL
- **/
+ */
 
 int bin_tree_size(const binary_tree_t *tree)
 {
@@ -37,8 +37,8 @@ int bin_tree_height(const binary_tree_t *tree)
 	if ((tree->left == NULL) && (tree->right == NULL))
 		return (0);
 
-	left_knot = bin_tree_height(tree->left);
 	right_knot = bin_tree_height(tree->right);
+	left_knot = bin_tree_height(tree->left);
 
 	if (right_knot >= left_knot)
 		return (right_knot + 1);
@@ -52,6 +52,7 @@ int bin_tree_height(const binary_tree_t *tree)
  *
  * Return: 0 if tree is NULL
  */
+
 int binary_tree_is_perfect(const binary_tree_t *tree)
 {
 	int left_knot, right_knot;
